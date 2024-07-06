@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+               *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    margin-left: auto; 
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    position: relative;
+    margin-left: 5px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    align-items: center; 
+    position: relative;
+}
+.nav ul li a:hover{
+    color:orangered
+}
+
+.nav ul li a .fa-solid {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+    position:relative;
+}
+
+.nav ul li .fa-solid::before {
+    content: "+";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav ul li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color:white;
+    box-shadow: 0 0 10px gainsboro;
+    z-index: 1;
+    padding: 5px 0;
+    width: auto; 
+}
+
+.nav ul li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    
+padding:0px 0;
+    align-items: center;
+
+}
+
+ul .sub-menu li a{
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    font-size: 18px;
+    
+}
+
+.nav button {
+    margin-left: 10px;
+    padding: 15px 40px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: orangered;
+    border: none;
+    border-radius: 25px;
+}
+
+.nav button:hover {
+    background-color: black;
+}
+
+.nav ul li:hover .fa-solid::before {
+    content: "-";
+    display: flex;
+    align-items: center;
+    justify-content: center;     
+    font-weight: bold;
+    font-size: 18px;
+}
+.page{
+    display: flex;
+    text-align: center;
+    column-gap: 70px;
+    width: 500px;
+}
+
+.container{
+            background: rgb(255, 233, 242);
+            height:300px;
+            width:100%;
+            text-align: center;
+        }
+
+.About{
+         padding-top:150px;
+        }
+        .About h1{
+    
+            font-size:45px;
+            font-weight:600;
+        }
+        .home{
+        
+           list-style:none;
+           margin-left:-100px;
+           font-size:20px;
+        }
+        .aboutus{
+            text-decoration:none;
+            list-style: none;
+            margin-left:90px;
+            margin-top:-23px;
+            font-size:20px;
+        }
+        .about a{
+            text-decoration: none;
+            list-style: none;
+        }
+        .container{
+            background-color: rgb(255, 233, 242);
+            height:300px;
+            width:100%;
+        }
+        .buttons{
+            display: flex;
+            margin-top:50px;
+        }
+        .buttons h1{
+            margin-left: 30px;
+            background:pink;
+            width: 250px;
+            height:40px;
+            text-align: center;
+            border-radius:25px;
+        }
+        
+        .buttons .but1 button{
+            width: 80px;
+            height:40px;
+            background:red;
+            border: none;  
+            border-radius: 25px;
+            color: white;
+            margin-left:550px;
+        }
+
+        .buttons .but1 button:hover{
+            background:black;
+        }
+
+        .buttons .but2 button{
+            width: 110px;
+            height:40px;
+            background:white;
+            border:1px solid, black;  
+            border-radius: 25px;
+            margin-left:10px;
+        }
+        .buttons .but3 button{
+            width: 110px;
+            height:40px;
+            background:white;
+            border:1px solid, black;   
+            border-radius: 25px;
+            margin-left:10px;
+        }
+        .buttons .but4 button{
+            width: 110px;
+            height:40px;
+            background:white;
+            border:1px solid, black;   
+            border-radius: 25px;
+            margin-left: 10px;
+        }
+        .images{
+           margin-top:50px;
+           display: flex;
+           justify-content: space-around;
+        }
+        .images .img1 img{
+            border-radius:25px;
+        }
+        .images .img1 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images .img1 h2{
+            margin-top:5px;
+        }
+        .images .img1 a{
+            margin-top:10px;
+            font-size:20px;
+             margin-left: 20px;
+        }
+
+        .images .img2 img{
+            border-radius:25px;
+        }
+        .images .img2 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images .img2 h2{
+            margin-top:5px;
+        }
+        .images .img2 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left: 20px;
+        }
+
+        .images .img3 img{
+            border-radius:25px;
+        }
+        .images .img3 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images .img3 h2{
+            margin-top:5px;
+        }
+        .images .img3 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left:20px;
+
+        }
+
+        .images1{
+           margin-top:50px;
+           display: flex;
+           justify-content: space-around;
+        }
+        .images1 .img1 img{
+            border-radius:25px;
+        }
+        .images1 .img1 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images1 .img1 h2{
+            margin-top:5px;
+        }
+        .images1 .img1 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left: 20px;
+
+        }
+
+        .images1 .img2 img{
+            border-radius:25px;
+        }
+        .images1 .img2 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images1 .img2 h2{
+            margin-top:5px;
+        }
+        .images1 .img2 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left:20px;
+
+        }
+
+        .images1 .img3 img{
+            border-radius:25px;
+        }
+        .images1 .img3 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images1 .img3 h2{
+            margin-top:5px;
+        }
+        .images1 .img3 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left:20px;
+
+        }
+
+        .images2{
+           margin-top:50px;
+           display: flex;
+           justify-content: space-around;
+        }
+        .images2 .img1 img{
+            border-radius:25px;
+        }
+        .images2 .img1 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images2 .img1 h2{
+            margin-top:5px;
+        }
+        .images2 .img1 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left: 20px;
+
+        }
+
+        .images2 .img2 img{
+            border-radius:25px;
+        }
+        .images2 .img2 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images2 .img2 h2{
+            margin-top:5px;
+        }
+        .images2 .img2 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left:20px;
+
+        }
+
+        .images2 .img3 img{
+            border-radius:25px;
+        }
+        .images2 .img3 h3{
+          margin-top:5px;
+          color: rgb(1, 207, 1);
+        }
+        .images2 .img3 h2{
+            margin-top:5px;
+        }
+        .images2 .img3 a{
+            margin-top:10px;
+            font-size:20px;
+            margin-left:20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="..//kiddd.svg" height="100px" width="200px">
+        </div>
+        <div class="nav">
+            <ul class="links">
+                <li>
+                    <a href="homeV1.html" style="margin-right: 50px;"> <i class="fa-solid fa-plus"></i>Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">HomeV1(preschool)</a></li>
+                        <li><a href="#">HomeV2(activities)</a></li>
+                    </ul>
+                </li>
+                <li><a style="margin-right:50px;" href="#">About</a></li>
+                <li><a style="margin-right:50px;" href="#">Service</a></li>
+                <li>
+                    <a href="#">Pages <i class="fa-solid fa-plus"></i></a>
+                    <ul class="sub-menu">
+                        <div class="page">
+                            <div class="page1">
+                        <h3 style="margin:10px;">Pages</h3>
+                        <li><a style="margin: 5px;" href="#">About Us</a></li>
+                        <li><a style="margin: 5px;" href="#">Pricing</a></li>
+                        <li><a style="margin: 5px;" href="#">Teacher</a></li>
+                        <li><a style="margin: 5px;" href="#">Teacher Details</a></li>
+                        <li><a style="margin: 5px;" href="#">Service</a></li>
+                        <li><a style="margin: 5px;" href="#">Blog</a></li>
+                        <li><a style="margin: 5px;" href="#">Blog Details</a></li>
+                        <li><a style="margin: 5px;" href="#">Contact Us</a></li>
+                        <li><a style="margin: 5px;" href="#">FAQ's</a></li>
+                    </div>
+                    <div class="page2">
+                        <h3 style="margin: 10px;"> Utility Pages</h3>
+                        <li><a style="margin: 5px;" href="#">Style Guide</a></li>
+                        <li><a style="margin: 5px;" href="#">Password Protected</a></li>
+                        <li><a style="margin: 5px;" href="#">404 Not found</a></li>
+                        <li><a style="margin: 5px;" href="#">Licence</a></li>
+                        <li><a style="margin: 5px;" href="#">ChangeLog</a></li>
+                       
+                    </div>
+                    </div>
+                    </ul>
+                </li>
+                <li><a style="margin-right:50px;" href="#">Blog</a></li>
+                <li><a style="margin-right:50px;" href="#">Pricing</a></li>
+                <li><a style="margin-right:50px;" href="#">Contact</a></li>
+                <li><a style="margin-right:25px;" href="#">Cart(0)</a></li>
+                <button style="margin-right: 10px; cursor:pointer;">Get Started</button>
+            </ul>
+        </div>
+    </div>
+  <div class="container">
+    <div class="About">     
+        <h1>Blog</h1> 
+          <a href="#">Home</a>
+         <a href="#">. Blog</a>
+         </div>
+     </div>
+
+  <div class="buttons">
+          <h1>All Latest News</h1>
+        <div class="but1">
+            <button>All</button>
+        </div>
+        <div class="but2">
+            <button>Childs</button>
+        </div>
+        <div class="but3">
+            <button>Playing</button>
+        </div>
+        <div class="but4">
+            <button>Nanniaes</button>
+        </div>
+
+  </div>
+
+  <div class="images">
+       <div class="img1">
+        <img src="../images/kits14.jpg" height="250px" width="380px">
+       <h3>August 5, 2019 . . . Childs<h3>
+         <h2>Professor Fiona Stanley - Children<br>
+             key to the future</h2>
+         <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+       </div>
+
+       <div class="img2">
+        <img src="../images/kits15.jpg" height="250px" width="380px">
+       <h3>August 5, 2019 . . . Playing<h3>
+         <h2>A close look at the Montessori<br>
+             Approach</h2>
+         <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+       </div>
+
+       <div class="img3">
+        <img src="../images/kits16.jpg" height="250px" width="380px">
+       <h3>August 5, 2019 . . . Nanniaes<h3>
+         <h2>What the Reggio Emilia approach<br>
+             can offer your child</h2>
+         <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+       </div>
+  </div>
+
+  <div class="images1">
+    <div class="img1">
+     <img src="../images/kits17.jpg" height="250px" width="380px">
+ 
+     <h3>August 5, 2019 . . . Childs<h3>
+      <h2>Professor Fiona Stanley - Children<br>
+          key to the future</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+
+    <div class="img2">
+     <img src="../images/kids1.jpg" height="250px" width="380px">
+    <h3>August 5, 2019 . . . Playing<h3>
+      <h2>A close look at the Montessori<br>
+          Approach</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+
+    <div class="img3">
+     <img src="../images/kits19.jpg" height="250px" width="380px">
+    <h3>August 5, 2019 . . . Nanniaes<h3>
+      <h2>What the Reggio Emilia approach<br>
+          can offer your child</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+</div>
+
+<div class="images2">
+    <div class="img1">
+     <img src="../images/kits20.jpg" height="250px" width="380px">
+    <h3>August 5, 2019 . . . Childs<h3>
+      <h2>Professor Fiona Stanley - Children<br>
+          key to the future</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+
+ <div class="img2">
+     <img src="../images/kits21.jpg" height="250px" width="380px">
+    <h3>August 5, 2019 . . . Playing<h3>
+      <h2>A close look at the Montessori<br>
+          Approach</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+
+    <div class="img3">
+     <img src="../images/kits22.jpg" height="250px" width="380px">
+    <h3>August 5, 2019 . . . Nanniaes<h3>
+      <h2>What the Reggio Emilia approach<br>
+          can offer your child</h2>
+      <a href="#">Read More</a><span class="material-symbols-outlined"> arrow_forward </span>
+    </div>
+</div>
+</body>
+</html>
